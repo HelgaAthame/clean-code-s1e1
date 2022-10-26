@@ -50,6 +50,7 @@ var createNewTaskElement=function(taskString){
     checkBox.type="checkbox";
     editInput.type="text";
     editInput.classList.add("main-section__text-input");
+    editInput.classList.add("main-section__text-input_mode_created");
     ////editInput.className="task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
@@ -117,6 +118,8 @@ var editTask=function(){
 
     //toggle .edit-mode on the parent.
     listItem.classList.toggle("main-section__list-item_mode-edit");
+    editInput.classList.toggle("main-section__text-input_mode-edit");
+    label.classList.toggle("main-section__label_mode-edit");
 };
 
 
@@ -138,6 +141,9 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    var label=listItem.querySelector(".main-section__label");
+    label.classList.remove("main-section__label_mode_created");
+    label.classList.add("main-section__label_mode_completed");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 

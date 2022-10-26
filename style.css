@@ -13,11 +13,11 @@
   text-align: right;
 }
 
-.eisenhower-matrix-wrapper .eisenhower-matrix {
+.eisenhower-matrix-wrapper__illustration {
   width: 100%;
 }
 
-.eisenhower-matrix-wrapper .more-inf {
+.eisenhower-matrix-wrapper__link {
   font-family: fantasy, cursive;
 }
 
@@ -36,6 +36,7 @@
 }
 
 .main-section__label_mode_created,
+.main-section__label_mode_completed,
 .main-section__text-input {
   width: 56%;
   display: inline-block;
@@ -133,14 +134,15 @@
   margin: 0 10px;
 }
 
-.main-section__list-item > .main-section__label {
+.main-section__label_mode_created,
+.main-section__label_mode_completed {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.main-section__list-item > .main-section__text-input {
+.main-section__text-input_mode_created {
   width: 226px;
 }
 
@@ -156,22 +158,22 @@
 
 /* Completed */
 
-.main-section__completed-tasks .main-section__label {
+.main-section__label_mode_completed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.main-section__list .main-section__list-item .main-section__text-input {
+.main-section__text-input_mode_created {
   display: none;
 }
 
-.main-section__list .main-section__list-item_mode-edit .main-section__text-input {
+.main-section__text-input_mode-edit {
   display: inline-block;
   width: 224px;
 }
 
-.main-section__list .main-section__list-item_mode-edit .main-section__label {
+.main-section__label_mode-edit {
   display: none;
 }
